@@ -18,7 +18,7 @@ function onChangeColor(event) {
   if (event) {  
     colorBody.style.backgroundColor = getRandomHexColor();
   }
-  colorNameEl.textContent = getRandomHexColor();
+  colorNameEl.textContent = colorBody.style.backgroundColor = getRandomHexColor();
   
 }
 

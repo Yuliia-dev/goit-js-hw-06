@@ -16,12 +16,12 @@ function onFormSubmit(event) {
         email,
         password,
     }
+    if (formData.email === '' || formData.password === '' ) {
+         return alert('Все поля должны быть заполнены!');    
+    }
     console.log(formData);
 
-if (formData.email === '' || formData.password === '' ) {
-        alert('Все поля должны быть заполнены!')
-}
-   formEL.reset(); 
+    formEL.reset(); 
 }
 
 
