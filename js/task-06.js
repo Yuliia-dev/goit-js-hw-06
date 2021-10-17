@@ -4,8 +4,9 @@ inputEl.addEventListener('blur', onInputBlur);
 inputEl.addEventListener('input', onInputBlur);
 
 function onInputBlur(event) {
-    
-    if (event.currentTarget.value.trim().length !== parseInt(inputEl.dataset.length)) {
+    const valueLength = event.currentTarget.value.trim().length;
+    const inputLength = parseInt(inputEl.dataset.length);
+    if (valueLength !== inputLength) {
         inputEl.classList.add('invalid');
     } else {
         inputEl.classList.remove('invalid');

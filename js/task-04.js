@@ -6,17 +6,14 @@ const refs = {
     increment: document.querySelector('[data-action="increment"]'),
 }
 
-refs.count.textContent = counterValue;
 
 refs.increment.addEventListener('click', onButtonAdd);
 refs.decrement.addEventListener('click', onButtonRemove);
 
 function onButtonAdd() {
-    counterValue += 1
-    refs.count.textContent = counterValue; 
+    refs.count.textContent = counterValue += 1; 
 }
 function onButtonRemove() {
-    counterValue -= 1
-   refs.count.textContent = counterValue; 
+   refs.count.textContent = counterValue -= 1; 
 }
 
