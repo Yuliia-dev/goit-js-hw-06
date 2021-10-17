@@ -16,9 +16,8 @@ function onChangeColor(event) {
   const colorBody = document.querySelector('.color');
 
   if (event) {  
-    colorBody.style.backgroundColor = getRandomHexColor();
+    const changColor = colorBody.style.backgroundColor = getRandomHexColor();
+    colorNameEl.textContent = changColor;
   }
-  colorNameEl.textContent = colorBody.style.backgroundColor = getRandomHexColor();
-  
 }
 

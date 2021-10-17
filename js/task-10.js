@@ -18,7 +18,7 @@ function onDestroyElement() {
 }
 
 function fillArray(element) {
-  let newArr = [];
+  const newArr = [];
   for (let i = 0; i < element; i += 1) {
     const box = document.createElement('div');
     box.style.height = 30 + (i * 10) + 'px';

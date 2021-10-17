@@ -6,7 +6,7 @@ inputEl.addEventListener('input', onInputLicense);
 nameEl.addEventListener('input', onInputLicense);
 
 function onInputLicense (event) {
-    nameEl.textContent = event.currentTarget.value;
+    nameEl.textContent = event.currentTarget.value.trim();
     
     if (nameEl.textContent === "") {
         nameEl.textContent = 'Anonymous';
