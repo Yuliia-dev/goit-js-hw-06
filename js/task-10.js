@@ -7,6 +7,7 @@ createBtnEl.addEventListener('click', onCreateBoxes);
 destroyBtnEl.addEventListener('click',onDestroyElement);
 
 function onCreateBoxes() {
+  containerBoxes.innerHTML = '';
   containerBoxes.append(...fillArray(inputEl.value));
 }
 
