@@ -1,4 +1,3 @@
-const containerControls = document.querySelector('#controls');
 const inputEl = document.querySelector('input');
 const createBtnEl = document.querySelector('button[data-create]');
 const destroyBtnEl = document.querySelector('button[data-destroy]');
@@ -8,12 +7,11 @@ createBtnEl.addEventListener('click', onCreateBoxes);
 destroyBtnEl.addEventListener('click',onDestroyElement);
 
 function onCreateBoxes() {
-  removeAllChildNodes(containerBoxes);
   containerBoxes.append(...fillArray(inputEl.value));
 }
 
 function onDestroyElement() {
-  removeAllChildNodes(containerBoxes);
+  containerBoxes.innerHTML = '';
   inputEl.value = '';
 }
 
@@ -29,11 +27,6 @@ function fillArray(element) {
   return newArr;
 }
 
-function removeAllChildNodes(parent) {
-  while (parent.firstChild) {
-    parent.removeChild(parent.firstChild);
-  }
-}
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
